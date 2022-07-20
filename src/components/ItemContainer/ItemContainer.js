@@ -3,9 +3,21 @@ import ItemProduct from '../ItemProduct/ItemProduct';
 
 const ItemContainer = () => {
   return (
+    const product1 = {
+      title: "Molinillo Chestnut C2",
+      price: "4150",
+      stock: "10"
+    }
+
+    const product2 = {
+      title: "Molinillo Timemore Slim Plus",
+      price: "7600",
+      stock: "100"
+    }
+
     <div className="list-products">
-        <ItemProduct title="Chestnut C2" price={4150} image={}/>
-        <ItemProduct title="Chestnut Slim Plus" price={7820} image={}/>
+        <ItemProduct data={product1}/>
+        <ItemProduct data={product2}/>
     </div>
   )
 }
