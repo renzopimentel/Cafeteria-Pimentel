@@ -17,7 +17,6 @@ function NavBar() {
                 <a href="/"> Cursos</a>
                 <a href="/"> Equipamiento</a>
                 <a href="/"> Kiosco</a>
-                <a href="/"> Cafetería</a>
             </div>
             <div className="burguer">
                 <BurguerButton click={click} handleClick={handleClick}/>
