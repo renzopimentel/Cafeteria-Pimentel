@@ -10,7 +10,6 @@ const ItemProduct = ({data, action}) => {
     const removeNumber = () => {
         setContador(contador - 1)
     }
-    const 
     const {title, image, price, stock} = data
     return(
         <div className='item-product'>
