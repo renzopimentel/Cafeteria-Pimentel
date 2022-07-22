@@ -1,6 +1,5 @@
 import React from 'react'
 import ItemProduct from '../ItemProduct/ItemProduct';
-import {ListContainer} from './ListElements'
 
 const ItemListContainer = ({section}) => {
   const product1 = {
@@ -15,18 +14,12 @@ const ItemListContainer = ({section}) => {
       stock: "100"
     }
     return (
-    <ListContainer>
+    <List>
         <h2>{section}</h2>
         <ItemProduct data={product1}/>
         <ItemProduct data={product2}/>
-    </ListContainer>
+    </List>
   )
 }
 
-export default ItemListContainer;
-
-const ListContainer = styled.div`
-  float: left;
-  width: 100%;
-  margin-bottom: 20px;
-`
+export default ItemListContainer
