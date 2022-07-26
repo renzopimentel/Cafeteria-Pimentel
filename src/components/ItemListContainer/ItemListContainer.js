@@ -1,25 +1,23 @@
 import React from 'react'
 import ItemProduct from '../ItemProduct/ItemProduct';
+import styled from 'styled-components';
+import { products } from '../../data';
 
-const ItemListContainer = ({section}) => {
-  const product1 = {
-      title: "Molinillo Chestnut C2",
-      price: "4150",
-      stock: "10"
-    }
-
-    const product2 = {
-      title: "Molinillo Timemore Slim Plus",
-      price: "7600",
-      stock: "100"
-    }
+const ItemListContainer = ({section}) => { 
     return (
-    <div>
-        <h2>{section}</h2>
-        <ItemProduct data={product1}/>
-        <ItemProduct data={product2}/>
-    </div>
+      <Container>
+        {products.map((item) => (
+            <ItemProduct item={item} key={item.id} />
+        ))}
+      </Container>
   )
 }
 
 export default ItemListContainer
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 20px;
+`

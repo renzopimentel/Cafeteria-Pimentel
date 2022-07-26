@@ -18,7 +18,7 @@ const Navbar = ({ click, handleClick }) => {
     return (
         <Nav>
             <NavbarContainer>
-                <NavLogo to='/'>Data Café</NavLogo>
+                <NavLogo to='/'>DATA.</NavLogo>
                 <MobileIcon onClick={handleClick}>
                     <BurguerButton />
                 </MobileIcon>
@@ -37,9 +37,9 @@ const Navbar = ({ click, handleClick }) => {
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <CartWidget />
                     <SearchWidget />
                     <LoginWidget />
+                    <CartWidget />
                 </NavBtn>
             </NavbarContainer>
         </Nav>

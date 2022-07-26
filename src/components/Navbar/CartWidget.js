@@ -1,13 +1,16 @@
-import React from 'react'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import React from 'react';
+import { Badge, BadgeProps } from '@mui/material';
+import styled from 'styled-components';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 
 const CartWidget = () => {
   return (
-    <div className='cart-widget'>
-        <ShoppingCartIcon />
-    </div>
-  )
+      <Badge badgeContent={4} color="primary" className='cart-widget'>
+        <ShoppingCartOutlinedIcon />
+      </Badge>
+  );
 }
 
 export default CartWidget
+

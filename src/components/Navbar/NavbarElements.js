@@ -94,10 +94,14 @@ export const NavBtn = styled.nav`
     }
 
     .cart-widget{
-        margin-right: 10px;
+        margin: 0 10px 4px 0;
     }
 
     .search-widget{
+        margin-right: 10px;
+    }
+
+    .login-widget{
         margin-right: 10px;
     }
 
