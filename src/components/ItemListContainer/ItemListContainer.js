@@ -14,11 +14,11 @@ const ItemListContainer = ({section}) => {
       stock: "100"
     }
     return (
-    <List>
+    <div>
         <h2>{section}</h2>
         <ItemProduct data={product1}/>
         <ItemProduct data={product2}/>
-    </List>
+    </div>
   )
 }
 

@@ -14,13 +14,13 @@ const ItemProduct = ({data, action}) => {
     return(
         <div className='item-product'>
             <img src="" alt="" />
-            <p>{props.title}</p>
-            <p>{props.price}</p>
+            <p>{title}</p>
+            <p>$ {price}</p>
             <button>Comprar</button>
             <div>
-                <button>{removeNumber}</button>
-                <p></p>
-                <button>{addNumber}</button>
+                <button onClick={removeNumber}>-</button>
+                <p>{contador}</p>
+                <button onClick={addNumber}>+</button>
             </div>
         </div>
         
