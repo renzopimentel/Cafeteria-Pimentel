@@ -1,6 +1,6 @@
-import { width } from '@mui/system';
 import react, { useState } from 'react';
 import styled from 'styled-components';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemProduct = ({item}) => {
     const [contador, setContador] = useState(1);
@@ -22,14 +22,7 @@ const ItemProduct = ({item}) => {
             <Image src={item.image} />
             <Text>{item.title}</Text>
             <Price>$ {item.price}</Price>
-            <CountContainer>
-                <QuantityContainer>
-                    <button onClick={removeNumber}>-</button>
-                    <p>{contador}</p>
-                    <button onClick={addNumber}>+</button>
-                </QuantityContainer>
-                <ProductButton>Agregar al carrito</ProductButton>
-            </CountContainer>
+            <ItemCount item={item} key={item.id}/>
         </Container>
     )
 }
@@ -47,24 +40,11 @@ const Container = styled.div`
     /* background-color: #4E5340; */
 `
 
-const CountContainer = styled.div`
-    width: 100%;
-`
-
 const Price = styled.text`
     width: 100%;
     text-align: center;
 `
 
-const QuantityContainer = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-`
-
-const ProductButton = styled.button`
-    width: 100%;
-`
 const Image = styled.img`
     display: block;
     margin: 5px auto 15px auto;
