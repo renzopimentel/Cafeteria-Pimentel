@@ -33,10 +33,9 @@ const Container = styled.div`
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 10px;
     min-width: 280px;
     height: 350px;
-    border-style: inset;
     /* background-color: #4E5340; */
 `
 

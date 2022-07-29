@@ -45,7 +45,12 @@ const CountContainer = styled.div`
 const QuantityContainer = styled.div`
     display: flex;
     width: 100%;
+    margin-bottom: 10px;
     justify-content: center;
+
+    .button{
+        margin: 10px 10px 10px 0;
+    }
 `
 
 const ProductButton = styled.button`

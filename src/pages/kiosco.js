@@ -1,21 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import Announcement from '../Announcement/Announcement';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import Navbar from '../Navbar';
+import ItemList from '../components/ItemList/ItemList';
 
 const Kiosco = () => {
-  const [click, setClick] = useState(false)
-
-  const handleClick = () =>{
-      // cuando esta en true lo pasa a false y visceversa
-       setClick(!click);
-  }
-
   return (
     <Container>
-      <Announcement />
-      <Navbar handleClick={handleClick}/>
       <Title>Kiosco</Title>
       <FilterContainer>
         <Filter><FilterText>Filtrar:</FilterText></Filter>
@@ -38,7 +27,7 @@ const Kiosco = () => {
           <Option>Fecha, nuevo a antiguo</Option>
         </Select>
       </FilterContainer>
-      <ItemListContainer />
+      <ItemList />
     </Container>
   )
 }
@@ -50,6 +39,7 @@ const Container = styled.div`
 const Filter = styled.div`
 `
 const Title = styled.h1`
+  text-align: center;
 `
 
 const FilterContainer = styled.div`
@@ -62,7 +52,7 @@ const FilterText = styled.span`
 `
 const Select = styled.select`
   padding: 10px;
-  margin-right: 20px;
+  margin-right: 26px;
 `
 
 const Option = styled.option``

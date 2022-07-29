@@ -3,7 +3,7 @@ import ItemProduct from '../ItemProduct/ItemProduct';
 import styled from 'styled-components';
 import { products } from '../../data';
 
-const ItemListContainer = ({section}) => { 
+const ItemList = ({section}) => { 
     return (
       <Container>
         {products.map((item) => (
@@ -13,7 +13,7 @@ const ItemListContainer = ({section}) => {
   )
 }
 
-export default ItemListContainer
+export default ItemList
 
 const Container = styled.div`
   display: flex;

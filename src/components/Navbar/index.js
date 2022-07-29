@@ -24,16 +24,16 @@ const Navbar = ({ click, handleClick }) => {
                 </MobileIcon>
                 <NavMenu className={`links ${click ? 'active' : ''}`}>
                     <NavItem>
-                        <NavLinks to='inicio'>Inicio</NavLinks>
+                        <NavLinks to='/'>Inicio</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='cursos'>Cursos</NavLinks>
+                        <NavLinks to='/cursos'>Cursos</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='equip'>Equipamientos</NavLinks>
+                        <NavLinks to='/equipamientos'>Equipamientos</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='kiosco'>Kiosco</NavLinks>
+                        <NavLinks to='/kiosco'>Kiosco</NavLinks>
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
