@@ -1,32 +1,48 @@
-import { Add, Remove } from '@mui/icons-material'
-import React from 'react'
+import { Add, Remove, RouteTwoTone } from '@mui/icons-material'
+import React, { useState } from 'react'
+import { Router } from 'react-router-dom';
 import styled from 'styled-components'
 
-const Item = () => {
+const Item = ({ item }) => {
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+
+    const handleQuantity = ({product}) =>{
+        if(type === "dec"){
+            quantity > 1 && setQuantity(quantity-1)
+        } else {
+            setQuantity(quantity+1)
+        }
+    }
+
+    //OBTENER PRODUCTO
+    router
   return (
     <Container>
+        <NavData>
+            <NavRoute>
+                Inicio/Kiosco/Fellow Stagg Kettle Eléctrica
+            </NavRoute>
+        </NavData>
         <Wrapper>
             <ImgContainer>
                 <Image src="./img/fellow_stagg.jpeg" alt="Image"/>
             </ImgContainer>
             <InfoContainer>
-                <Title>Fellow Stagg Kettle Eléctrica</Title>
+                <Title>{item.title}}</Title>
                 <TitleDesc>Descripción</TitleDesc>
                 <Desc>
-                        Fellow Stagg EKG combina un hermoso diseño con una serie de características avanzadas:
-                        La práctica capacidad de 900 ml hace que toda la familia prepare café.
-                        El cuello contorneado y la boquilla precisa le permiten controlar el chorro de agua. Preparar café en un Chemex o gotero será más preciso y repetible, y lo hará aún más agradable.
-                        Control electrónico de temperatura de 57 a 100 grados centígrados.
+                        Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
                 </Desc>
                 <Price>$U 10.700,00</Price>
             </InfoContainer>
             <AddContainer>
                 <AmountContainer>
-                    <Remove />
+                    <Remove onClick={() => handleQuantity("dec")}/>
                     <Amount>1</Amount>
-                    <Add />
+                    <Add onClick={() => handleQuantity("inc")}/>
                 </AmountContainer>
-                <Button>AGREGAR AL CARRITO</Button>
+                <Button>AÑADIR AL CARRITO</Button>
             </AddContainer>
         </Wrapper>
     </Container>
@@ -38,9 +54,21 @@ export default Item
 const Container = styled.div`
     flex: 1;
 `
+
+const NavData =styled.div`
+    margin: 20px 0 60px;
+    text-decoration: none !important;
+    display: flex;
+`
+const NavRoute = styled.div`
+    flex: 1 1 0;
+    box-sizing: border-box;
+`
+
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
+    justify-content: space-between;
 `
 const InfoContainer = styled.div`
     flex: 1;
@@ -48,6 +76,9 @@ const InfoContainer = styled.div`
 `
 const ImgContainer = styled.div`
     flex: 1;
+    width: 580px;
+    height: 420px;
+    margin-bottom: 80px;
 `
 
 const Image = styled.image`
@@ -73,9 +104,10 @@ const Price = styled.span`
 const AddContainer = styled.div`
     display: flex;
     align-items: center;
-    width: 50%
+    width: 50%;
     justify-content: space-between;
 `
+
 const AmountContainer = styled.div`
     display: flex;
     align-items: center;
@@ -86,15 +118,14 @@ const Amount = styled.div`
     height: 30px;
     border-radius: 10px;
     border: 1px solid #565857;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     margin: 0 5px;
 `
 const Button = styled.button`
     padding: 15px;
-    border: 2px solid teal;
-    background-color: #fff;
+    border-radius: 6px;
+    color: white;
+    background-color: black;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
 `
