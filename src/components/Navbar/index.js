@@ -8,7 +8,8 @@ import {
         NavMenu, 
         NavItem, 
         NavLinks,
-        NavBtn, 
+        NavBtn,
+        LinkIcons 
     } from './NavbarElements'
 import CartWidget from './CartWidget'
 import LoginWidget from './LoginWidget'
@@ -37,9 +38,13 @@ const Navbar = ({ click, handleClick }) => {
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <SearchWidget />
-                    <LoginWidget />
-                    <CartWidget />
+                    <SearchWidget /> 
+                    <LinkIcons to='/login' className='login-widget'>
+                        <LoginWidget />
+                    </LinkIcons>
+                    <LinkIcons to='/carrito' className='cart-widget'>
+                        <CartWidget />
+                    </LinkIcons>
                 </NavBtn>
             </NavbarContainer>
         </Nav>

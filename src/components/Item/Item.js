@@ -2,50 +2,31 @@ import { Add, Remove, RouteTwoTone } from '@mui/icons-material'
 import React, { useState } from 'react'
 import { Router } from 'react-router-dom';
 import styled from 'styled-components'
+import ItemCount from '../ItemCount/ItemCount';
 
-const Item = ({ item }) => {
-    const [product, setProduct] = useState({});
-    const [quantity, setQuantity] = useState(1);
-
-    const handleQuantity = ({product}) =>{
-        if(type === "dec"){
-            quantity > 1 && setQuantity(quantity-1)
-        } else {
-            setQuantity(quantity+1)
-        }
-    }
-
-    //OBTENER PRODUCTO
-    router
-  return (
-    <Container>
-        <NavData>
-            <NavRoute>
-                Inicio/Kiosco/Fellow Stagg Kettle Eléctrica
-            </NavRoute>
-        </NavData>
-        <Wrapper>
-            <ImgContainer>
-                <Image src="./img/fellow_stagg.jpeg" alt="Image"/>
-            </ImgContainer>
-            <InfoContainer>
-                <Title>{item.title}}</Title>
-                <TitleDesc>Descripción</TitleDesc>
-                <Desc>
-                        Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
-                </Desc>
-                <Price>$U 10.700,00</Price>
-            </InfoContainer>
-            <AddContainer>
-                <AmountContainer>
-                    <Remove onClick={() => handleQuantity("dec")}/>
-                    <Amount>1</Amount>
-                    <Add onClick={() => handleQuantity("inc")}/>
-                </AmountContainer>
-                <Button>AÑADIR AL CARRITO</Button>
-            </AddContainer>
-        </Wrapper>
-    </Container>
+const Item = ({ data }) => {
+    return (
+        <Container>
+            <NavData>
+                <NavRoute>
+                    Inicio/Kiosco/Fellow Stagg Kettle Eléctrica
+                </NavRoute>
+            </NavData>
+            <Wrapper>
+                <ImgContainer>
+                    <ImgItem src={data.image}/>
+                </ImgContainer>
+                <InfoContainer>
+                    <Title>{data.title}</Title>
+                    <TitleDesc>Descripción</TitleDesc>
+                    <Desc>
+                            Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
+                    </Desc>
+                    <Price>$U {data.price},00</Price>
+                </InfoContainer>
+                <ItemCount item={data}/>
+            </Wrapper>
+        </Container>
   )
 }
 
@@ -81,7 +62,7 @@ const ImgContainer = styled.div`
     margin-bottom: 80px;
 `
 
-const Image = styled.image`
+const ImgItem = styled.img`
     width: 100%;
 `
 
@@ -97,7 +78,7 @@ const Desc = styled.p`
 `
 
 const Price = styled.span`
-    font-weight: 100;
+    font-weight: 200;
     font-size: 40px;
 `
 

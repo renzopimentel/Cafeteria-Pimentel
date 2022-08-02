@@ -7,9 +7,10 @@ const Kiosco = () => {
     <Container>
       <Title>Kiosco</Title>
       <FilterContainer>
+
         <Filter><FilterText>Filtrar:</FilterText></Filter>
         <Select>
-          <Option disabled selectede>
+          <Option disabled defaultValue>
             Marcas
           </Option>
           <Option>Fellow</Option>
@@ -45,10 +46,13 @@ const Title = styled.h1`
 const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 `
 const FilterText = styled.span`
-  font-style: 20px;
-  font-weight: 600;
+  font-size: 90%;
+  font-weight: 400;
+  margin-bottom: 5px;
+  display: inline-block;
 `
 const Select = styled.select`
   padding: 10px;

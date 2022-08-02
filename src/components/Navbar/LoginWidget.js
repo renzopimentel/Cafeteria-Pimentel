@@ -3,9 +3,9 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 const LoginWidget = () => {
   return (
-    <div className='login-widget'>
+      <>
         <PersonOutlineIcon />
-    </div>
+      </>  
   )
 }
 

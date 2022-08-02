@@ -1,25 +1,29 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
 import react from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const ItemProduct = ({item}) => {
+const ItemProduct = ({data}) => {
+    const {id, title, brand, image, price, stock} = data
     return(
         <Container>
             <Circle />
-            <Image src={item.image} />
+            <Image src={image} alt="Imagen Producto"/>
             <Info>
                 <Icon>
                     <ShoppingCartOutlined />
                 </Icon>
                 <Icon>
-                    <SearchOutlined />
+                    <Link to={`/producto/${id}`}>
+                        <SearchOutlined />
+                    </Link>
                 </Icon>
                 <Icon>
                     <FavoriteBorderOutlined />
                 </Icon>
             </Info>
-            <Price>$ {item.price}</Price>
-            <TitleItem>{item.title}</TitleItem>
+            <Price>$ {price}</Price>
+            <TitleItem>{title}</TitleItem>
         </Container>
     )
 }
@@ -85,8 +89,6 @@ const Circle = styled.div`
     position: absolute;
     z-index: 1;
 `
-
-
 
 const Price = styled.span`
     width: 100%;

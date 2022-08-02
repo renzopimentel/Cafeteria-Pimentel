@@ -24,7 +24,7 @@ const ItemCount = ({ item }) => {
                         <p>{contador}</p>
                         <button onClick={addNumber}>+</button>
                     </QuantityContainer>
-                    <ProductButton>Agregar al carrito</ProductButton>
+                    <ProductButton>AÑADIR AL CARRITO</ProductButton>
                 </CountContainer>
         </Container>
     )

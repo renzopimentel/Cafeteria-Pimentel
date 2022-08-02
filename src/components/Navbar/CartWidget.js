@@ -6,7 +6,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const CartWidget = () => {
   return (
-      <Badge badgeContent={4} color="primary" className='cart-widget'>
+      <Badge badgeContent={4} color="primary">
         <ShoppingCartOutlinedIcon />
       </Badge>
   );
