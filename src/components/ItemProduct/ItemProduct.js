@@ -1,33 +1,65 @@
-import react, { useState } from 'react';
+import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material';
+import react from 'react';
 import styled from 'styled-components';
-import ItemCount from '../ItemCount/ItemCount';
 
 const ItemProduct = ({item}) => {
-    const [contador, setContador] = useState(1);
-
-    const addNumber = () => {
-        if (item.stock > contador){
-           setContador(contador + 1) 
-        }
-    }
-
-    const removeNumber = () => {
-        if (contador > 1){
-             setContador(contador - 1)
-        }
-    }
-
     return(
         <Container>
+            <Circle />
             <Image src={item.image} />
-            <Text>{item.title}</Text>
+            <Info>
+                <Icon>
+                    <ShoppingCartOutlined />
+                </Icon>
+                <Icon>
+                    <SearchOutlined />
+                </Icon>
+                <Icon>
+                    <FavoriteBorderOutlined />
+                </Icon>
+            </Info>
             <Price>$ {item.price}</Price>
-            <ItemCount item={item} key={item.id}/>
+            <TitleItem>{item.title}</TitleItem>
         </Container>
     )
 }
 
 export default ItemProduct;
+
+
+const Icon = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover{
+        background-color: black;
+        color: white;
+        transform: scale(1.1);
+    }
+`
+const Info = styled.div`
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+`
 
 const Container = styled.div`
     flex: 1;
@@ -36,10 +68,27 @@ const Container = styled.div`
     margin: 10px;
     min-width: 280px;
     height: 350px;
-    /* background-color: #4E5340; */
+    background-color: #eeee;
+    position: relative;
+    border-radius: 10px;
+
+    &:hover ${Info}{
+        opacity: 1;
+    }
+`
+const Circle = styled.div`
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 40px 20px 0 60px;
+    position: absolute;
+    z-index: 1;
 `
 
-const Price = styled.text`
+
+
+const Price = styled.span`
     width: 100%;
     text-align: center;
 `
@@ -48,8 +97,9 @@ const Image = styled.img`
     display: block;
     margin: 5px auto 15px auto;
     height: 65%;
+    z-index: 2;
 `
-const Text = styled.text`
+const TitleItem = styled.h3`
     width: 100%;
     text-align: center;
 `

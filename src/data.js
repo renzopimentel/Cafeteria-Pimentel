@@ -5,7 +5,7 @@ export const products = [
         title: "Molinillo Chestnut C2",
         brand: "Timemore",
         price: "4.150",
-        image: "https://static.wixstatic.com/media/b9b788_c200077f5a504243bd6df2016eaae2e0~mv2.jpg/v1/fill/w_1280,h_1280,al_c,q_85/b9b788_c200077f5a504243bd6df2016eaae2e0~mv2.jpg",
+        image: "https://cdn.shopify.com/s/files/1/0897/8794/products/f772df8e-d110-4730-ba9d-eedb6d6bd81b_1200x1200.png?v=1630471497",
         stock: "10"
       },
       {
@@ -13,7 +13,7 @@ export const products = [
         title: "Molinillo Timemore Slim Plus",
         brand: "Timemore",
         price: "7.600",
-        image:"https://static.wixstatic.com/media/b9b788_9b52cbe143ac4c878c5361557c038cfe~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+        image:"/assets/timemore_slim+.png",
         stock: "10"
       },
       {
@@ -21,7 +21,7 @@ export const products = [
         title: "Prensa Francesa",
         brand: "Timemore",
         price: "1.400",
-        image:"https://static.wixstatic.com/media/b9b788_ceb5fb6a3d314ee0a7fde38327fdfadd~mv2.jpg/v1/fill/w_840,h_840,al_c,q_85,usm_0.66_1.00_0.01/b9b788_ceb5fb6a3d314ee0a7fde38327fdfadd~mv2.webp",
+        image:"/assets/timemore_french_press.png",
         stock: "10"
       },
       {
@@ -29,7 +29,7 @@ export const products = [
         title: "Balanza Nano",
         brand: "Timemore",
         price: "5.300",
-        image:"https://static.wixstatic.com/media/b9b788_ab1fb57aa0694ae29556bf925530896f~mv2.png/v1/fill/w_840,h_840,al_c,q_90,usm_0.66_1.00_0.01/b9b788_ab1fb57aa0694ae29556bf925530896f~mv2.webp",
+        image:"/assets/timemore_nano.png",
         stock: "10"
       },
       {
@@ -37,7 +37,7 @@ export const products = [
         title: "Balanza Black Mirror",
         brand: "Timemore",
         price: "3.700",
-        image: "https://static.wixstatic.com/media/b9b788_601b135a901b43fe887b14b60d57c749~mv2.png/v1/fill/w_840,h_840,al_c,q_90,usm_0.66_1.00_0.01/b9b788_601b135a901b43fe887b14b60d57c749~mv2.webp",
+        image:"/assets/timemore_black_scale.png",
         stock: "10"
       },
       {
@@ -45,7 +45,7 @@ export const products = [
         title: "Crystal Eyedripper",
         brand: "Timemore",
         price: "800",
-        image: "https://static.wixstatic.com/media/b9b788_cd3e2e63d287417cb79bd7477ea02505~mv2.png/v1/fill/w_523,h_488,al_c,lg_1,q_90/b9b788_cd3e2e63d287417cb79bd7477ea02505~mv2.webp",
+        image:"/assets/timemore_crystal_eyedripper.png",
         stock: "20"
       },
       {
@@ -53,7 +53,7 @@ export const products = [
         title: "Ice Dripper",
         brand: "Timemore",
         price: "4.300",
-        image: "https://static.wixstatic.com/media/b9b788_2cd6081d53654845b51701b61c7ebc09~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85/b9b788_2cd6081d53654845b51701b61c7ebc09~mv2.webp",
+        image:"/assets/timemore_icedripper.webp",
         stock: "10"
       },
       {
@@ -61,7 +61,7 @@ export const products = [
         title: "Stagg Pour-Over Eléctrica 220v",
         brand: "Fellow",
         price: "10.700",
-        image: "https://static.wixstatic.com/media/b9b788_70844c2b5115484093a03ba8e5c9e95e~mv2.png/v1/fill/w_720,h_720,al_c,lg_1,q_90/b9b788_70844c2b5115484093a03ba8e5c9e95e~mv2.webp",
+        image: "https://cdn.shopify.com/s/files/1/0057/6235/1219/products/Stagg-EKG-01-Matte-Black-01_0b8b2e80-33e1-414d-ac19-a7a41eac02a1.png?v=1649189775",
         stock: "10"
       },
       {
@@ -69,7 +69,7 @@ export const products = [
         title: "Stagg Pour-Over Kettle",
         brand: "Fellow",
         price: "4.300",
-        image: "https://static.wixstatic.com/media/b9b788_9da9efd57ca94cd09c7e373361541b10~mv2.jpg/v1/fill/w_650,h_650,al_c,q_85/b9b788_9da9efd57ca94cd09c7e373361541b10~mv2.webp",
+        image: "https://cdn.shopify.com/s/files/1/0057/6235/1219/products/Stagg-Stovetop-Pourover-Kettle-01-Matte-Black-01_025637ed-9e3f-4465-88f3-d73a88ae1524_900x.png?v=1635174397",
         stock: "10"
       },
       {
@@ -77,7 +77,7 @@ export const products = [
         title: "Stagg Dripper Set XF",
         brand: "Fellow",
         price: "6.700",
-        image: "https://static.wixstatic.com/media/b9b788_a5925216b7b642c9b046eb7f9694445a~mv2_d_2703_3823_s_4_2.jpg/v1/fill/w_594,h_840,al_c,q_85,usm_0.66_1.00_0.01/b9b788_a5925216b7b642c9b046eb7f9694445a~mv2_d_2703_3823_s_4_2.webp",
+        image:"/assets/Stagg_Dripper_XF.webp",
         stock: "10"
       },
       {
@@ -85,7 +85,7 @@ export const products = [
         title: "Stagg X Set",
         brand: "Fellow",
         price: "5.400",
-        image: "https://static.wixstatic.com/media/b9b788_5eb1c3bc8f9041218a67858b3a84a7a6~mv2.jpg/v1/fill/w_750,h_750,al_c,q_85/b9b788_5eb1c3bc8f9041218a67858b3a84a7a6~mv2.webp",
+        image: "/assets/Stagg-X-Pour-Over-Set-01.webp",
         stock: "10"
       },
       {
@@ -93,7 +93,7 @@ export const products = [
         title: "Carter Move Mug 12oz",
         brand: "Fellow",
         price: "1.900",
-        image: "https://static.wixstatic.com/media/b9b788_007ffafbabc34d9fbc152845da134a03~mv2.png/v1/fill/w_720,h_720,al_c,lg_1,q_90/b9b788_007ffafbabc34d9fbc152845da134a03~mv2.webp",
+        image: "/assets/Carter-Everywhere-Mug-01-Matte-Black-02_900x.webp",
         stock: "10"
       },
 

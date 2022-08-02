@@ -8,8 +8,6 @@ import Navbar from '../Navbar/index'
 const Cart = () => {
   return (
     <Container>
-        <Navbar />
-        <Announcement />
         <Wrapper>
             <Title>TU CARRITO</Title>
             <Top>
@@ -43,6 +41,7 @@ const Top = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
 `
 const TopButton = styled.div`
     padding: 10px;

@@ -19,10 +19,10 @@ const Kiosco = () => {
         <Select>
           <Option>Destacados</Option> 
           <Option>Más vendidos</Option>
-          <Option>Precio, menor a mayor</Option>
-          <Option>Precio, mayor a menor</Option>
-          <Option>Alfabeticamente, A-Z</Option>
-          <Option>Alfabeticamente, Z-A</Option>
+          <Option>Precio (asc)</Option>
+          <Option>Precio (desc)</Option>
+          <Option>A-Z</Option>
+          <Option>Z-A</Option>
           <Option>Fecha, antiguo a nuevo</Option>
           <Option>Fecha, nuevo a antiguo</Option>
         </Select>

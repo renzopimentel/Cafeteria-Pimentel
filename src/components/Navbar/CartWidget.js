@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, BadgeProps } from '@mui/material';
+import { Badge } from '@mui/material';
 import styled from 'styled-components';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
