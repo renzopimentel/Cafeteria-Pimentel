@@ -77,14 +77,43 @@ export const NavLinks = styled(Link)`
     height: 100%;
     cursor: pointer;
 
-    &.active{
-        border-bottom: 3px solid #01bf71;
+    .span{
+        font-size: 16px;
+        letter-spacing: 1.42px;
+        position: relative;
+
+        &:after{
+            content: "";
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            opacity: 0;
+            transform: scaleX(0);
+        }
     }
+
+    
+    &:hover{
+        span:after{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
 `;
 
 export const LinkIcons = styled(Link)`
     .cart-widget{
         margin: 0 10px 4px 0;
+        color: white;
+    }
+
+    .cart-widget:hover {
+        margin: 0 10px 4px 0;
+        transform: scale(1.1);
     }
 
     .login-widget{

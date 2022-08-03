@@ -1,18 +1,19 @@
+import { Add, Remove } from '@mui/icons-material';
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const ItemCount = ({ item }) => {
     const [contador, setContador] = useState(1);
 
-    const addNumber = () => {
+    function incrementCount () {
         if (item.stock > contador){
-           setContador(contador + 1) 
+           setContador(currCount => currCount + 1) 
         }
     }
 
-    const removeNumber = () => {
+    function decrementCount () {
         if (contador > 1){
-             setContador(contador - 1)
+             setContador(currCount => currCount - 1)
         }
     }
 
@@ -20,9 +21,9 @@ const ItemCount = ({ item }) => {
         <Container>
             <CountContainer>
                     <QuantityContainer>
-                        <button onClick={removeNumber}>-</button>
-                        <p>{contador}</p>
-                        <button onClick={addNumber}>+</button>
+                        <Remove onClick={decrementCount} />
+                        <Amount>{contador}</Amount>
+                        <Add onClick={incrementCount}/>
                     </QuantityContainer>
                     <ProductButton>AÑADIR AL CARRITO</ProductButton>
                 </CountContainer>
@@ -44,15 +45,26 @@ const CountContainer = styled.div`
 `
 const QuantityContainer = styled.div`
     display: flex;
-    width: 100%;
-    margin-bottom: 10px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: initial;
+    margin: 20px 40px;
+`
 
-    .button{
-        margin: 10px 10px 10px 0;
-    }
+const Amount = styled.span`
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid teal;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
 `
 
 const ProductButton = styled.button`
-    width: 100%;
+    padding: 15px;
+    border: 2px solid teal;
+    background-color: white;
+    cursor: pointer;
 `

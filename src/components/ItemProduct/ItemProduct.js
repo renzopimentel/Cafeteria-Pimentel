@@ -14,7 +14,7 @@ const ItemProduct = ({data}) => {
                     <ShoppingCartOutlined />
                 </Icon>
                 <Icon>
-                    <Link to={`/producto/${id}`}>
+                    <Link to={`/producto/${id}`} className="link">
                         <SearchOutlined />
                     </Link>
                 </Icon>
@@ -47,6 +47,14 @@ const Icon = styled.div`
         background-color: black;
         color: white;
         transform: scale(1.1);
+    }
+
+    .link{
+        color:black;
+    }
+
+    .link:hover{
+        color: white;
     }
 `
 const Info = styled.div`
