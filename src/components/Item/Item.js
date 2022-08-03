@@ -20,11 +20,11 @@ const Item = ({ data }) => {
                     <Title>{data.title}</Title>
                     <TitleDesc>Descripción</TitleDesc>
                     <Desc>
-                            Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
+                        Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
                     </Desc>
                     <Price>$U {data.price},00</Price>
+                    <ItemCount item={data}/>
                 </InfoContainer>
-                <ItemCount item={data}/>
             </Wrapper>
         </Container>
   )
