@@ -28,6 +28,12 @@ const Navbar = ({ click, handleClick }) => {
                         <NavLinks to='/'><span>Inicio</span></NavLinks>
                     </NavItem>
                     <NavItem>
+                        <NavLinks to='/balanzas'><span>Balanzas</span></NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to='/molinillo'><span>Molinillos</span></NavLinks>
+                    </NavItem>
+                    {/* <NavItem>
                         <NavLinks to='/cursos'><span>Cursos</span></NavLinks>
                     </NavItem>
                     <NavItem>
@@ -35,7 +41,7 @@ const Navbar = ({ click, handleClick }) => {
                     </NavItem>
                     <NavItem>
                         <NavLinks to='/kiosco'><span>Kiosco</span></NavLinks>
-                    </NavItem>
+                    </NavItem> */}
                 </NavMenu>
                 <NavBtn>
                     <SearchWidget /> 

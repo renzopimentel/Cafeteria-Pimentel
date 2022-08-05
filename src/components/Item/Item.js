@@ -5,24 +5,26 @@ import styled from 'styled-components'
 import ItemCount from '../ItemCount/ItemCount';
 
 const Item = ({ data }) => {
+    const {title, image, price, stock} = data
+
     return (
         <Container>
             <NavData>
                 <NavRoute>
-                    Inicio/Kiosco/Fellow Stagg Kettle Eléctrica
+                    Inicio / Kiosco / {title}
                 </NavRoute>
             </NavData>
             <Wrapper>
                 <ImgContainer>
-                    <ImgItem src={data.image}/>
+                    <ImgItem src={image}/>
                 </ImgContainer>
                 <InfoContainer>
-                    <Title>{data.title}</Title>
+                    <Title>{title}</Title>
                     <TitleDesc>Descripción</TitleDesc>
                     <Desc>
                         Caldera cuello de cisne c/ termómetro Fellow. Modelo con base eléctica. 1 Litro, Negra
                     </Desc>
-                    <Price>$U {data.price},00</Price>
+                    <Price>$U {price},00</Price>
                     <ItemCount item={data}/>
                 </InfoContainer>
             </Wrapper>
@@ -42,12 +44,12 @@ const NavData =styled.div`
     display: flex;
 `
 const NavRoute = styled.div`
-    flex: 1 1 0;
-    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 5rem;
 `
 
 const Wrapper = styled.div`
-    padding: 50px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
 `

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import ItemList from '../components/ItemList/ItemList';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
 const Kiosco = () => {
   return (
@@ -28,7 +28,7 @@ const Kiosco = () => {
           <Option>Fecha, nuevo a antiguo</Option>
         </Select>
       </FilterContainer>
-      <ItemList />
+      <ItemListContainer />
     </Container>
   )
 }

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const ItemProduct = ({data}) => {
-    const {id, title, brand, image, price, stock} = data
+    const {id, title, brand, image, price, stock, category} = data
+
     return(
         <Container>
             <Circle />
@@ -14,7 +15,7 @@ const ItemProduct = ({data}) => {
                     <ShoppingCartOutlined />
                 </Icon>
                 <Icon>
-                    <Link to={`/producto/${id}`} className="link">
+                    <Link to={`/${category}/${id}`} className="link">
                         <SearchOutlined />
                     </Link>
                 </Icon>
