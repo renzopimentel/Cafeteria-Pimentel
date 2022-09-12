@@ -11,7 +11,6 @@ function ItemContainer({ section }) {
 
     useEffect( () => {
         filterById()
-
     }, [])
 
     const filterById = () => {
