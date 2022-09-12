@@ -1,0 +1,72 @@
+
+.imgcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}   
+
+.navdata {
+    margin: 40px 140px 25px;
+    text-decoration: none !important;
+    display: flex;
+}
+
+.left{
+    display: flex;
+    height: 50vh;
+}
+
+.left_1 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.img_wrap {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.img_wrap img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.left_2 {
+    margin: 20px;
+}
+
+.left_2 img {
+    width: 500px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.active {
+    border: 2px solid #916344;
+}
+
+.infocontainer {
+    display: grid;
+    flex: 1;
+    padding: 0 50px;
+}
+
+.fw200 {
+    font-weight: 200;
+}
+
+.desc {
+    margin: 20px;
+    margin-left: 0;
+}
+
+.price {
+    font-weight: 200;
+    font-size: 40px;
+}
