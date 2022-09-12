@@ -29,7 +29,7 @@ const ItemListContainer = ({ section }) => {
         getProducts()
         .then((res) => {
           setListProducts(res)
-        })
+        });
         // getProducts
         //     .then((res) => {
         //         setListProducts(res);
