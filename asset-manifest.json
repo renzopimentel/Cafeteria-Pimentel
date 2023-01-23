@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Cafeteria-Pimentel/static/css/main.aea0b4bd.css",
+    "main.js": "/Cafeteria-Pimentel/static/js/main.5fadabde.js",
+    "static/media/video_coffee.mp4": "/Cafeteria-Pimentel/static/media/video_coffee.6f4caee951f270294251.mp4",
+    "index.html": "/Cafeteria-Pimentel/index.html",
+    "main.aea0b4bd.css.map": "/Cafeteria-Pimentel/static/css/main.aea0b4bd.css.map",
+    "main.5fadabde.js.map": "/Cafeteria-Pimentel/static/js/main.5fadabde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aea0b4bd.css",
+    "static/js/main.5fadabde.js"
+  ]
+}
